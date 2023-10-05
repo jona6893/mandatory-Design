@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+     --header-bg-color: rgb(255, 39, 39);
+     --header-ul-color: rgb(52, 60, 84);
+     --text-color-white: white;
+     --color-gray: gray ;
+     --color-header-select: rgb(255, 187, 14);
+
+     --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+--font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+--font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+--font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+--font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+--font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+    
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img{
+    width: 100%;
+}
+p{
+    font-size: var(--font-size-base);
+}
+
+
+header{
+    background-color: var(--header-bg-color) ;
+}
+
+header h1{
+    font-size: var(--font-size-xxl);
+    color: var(--text-color-white);
+    margin: 0;
+    padding: 1rem;
+    font-weight: 700;
+}
+header ul{
+   background-color: var(--header-ul-color) ;
+   padding: 1rem;
+   display: flex;
+   gap: 1rem;
+   list-style: none;
+   text-align: center;
+}
+#home{
+    color: var(--color-header-select);
+}
+header ul a {
+   text-decoration: none;
+   color: var(--text-color-white);
+   font-weight: 600;
+   font-size: var(--font-size-base);
+}
+
+
+main{
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+#section1{
+    display: grid;
+    gap: 1rem;
+}
+#section2 img{
+    border-radius: 1rem;
+}
+
+main ul{
+    list-style: none;
+}
+main ul li{
+    color: var(--header-bg-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: 0.25rem;
+}
+blockquote{
+
+    grid-column: 1/3;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--text-color-white);
+    background-color: var(--color-gray);
+    font-size: var(--font-size-base);
+}
+
+footer{
+    background: var(--header-ul-color);
+    color: var(--text-color-white);
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+@media (max-width: 	768px){
+   
+    header ul{
+   background-color: var(--header-ul-color) ;
+   padding: 1rem;
+   display: grid;
+   justify-content: center;
+   gap: 1rem;
+   list-style: none;
+
+}
+
+header ul a {
+   text-decoration: none;
+   color: var(--text-color-white);
+   font-weight: 600;
+   font-size: var(--font-size-base);
+   border-bottom: 1px var(--text-color-white) solid;
+}
+
+main{
+
+    grid-template-columns: 1fr;
+}
+blockquote{
+    grid-column: 1/2;
+order: 3;
+}
+#section1{
+    order: 2;
+}
+#section2{
+    order: 1;
+}
+
+}
