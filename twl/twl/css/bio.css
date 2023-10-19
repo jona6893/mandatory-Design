@@ -1,0 +1,66 @@
+ #bio {
+    display: flex;
+    justify-content: center;
+    gap: var(--p8);
+    padding: var(--p8);
+  }
+  
+#bio aside {
+  display: none;
+  height: fit-content;
+}
+#bio p,
+blockquote {
+  max-width: 120ch;
+}
+.bioParagraph {
+  /*  padding: var(--p6); */
+  display: grid;
+  gap: var(--p8);
+  line-height: 1.5;
+}
+.bioParagraph blockquote {
+  background-color: var(--lightBlue);
+  padding: var(--p6);
+  color: var(--white);
+  border-radius: 1rem;
+  text-align: center;
+  display: grid;
+  gap: var(--p4);
+}
+
+.bioParagraph blockquote span {
+  text-align: end;
+}
+
+#bio .books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--p4);
+}
+
+@media (min-width: 648px) {
+ 
+
+  #bio aside {
+    display: grid;
+    gap: var(--p8);
+  }
+}
+
+/* hide 2 books on table */
+@media (max-width: 1024px) {
+  .book3,
+  .book4 {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  #bio aside {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--p10);
+    justify-content: center;
+  }
+}

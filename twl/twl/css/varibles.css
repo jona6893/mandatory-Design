@@ -1,0 +1,89 @@
+@import "tour.css";
+@import "newRelease.css";
+@import "header.css";
+@import "contact.css";
+@import "books.css";
+@import "bio.css";
+
+body{
+    max-width: 1440px;
+    margin-inline: auto;
+}
+*{
+    /* Defaults */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style:  "sans serif";
+    /* Colors */
+    --darkBlue: rgb(39, 36, 92);
+    --lightBlue: rgb(66, 141, 203);
+    --beige: beige;
+    --darkRed: darkred;
+    --white: white;
+    --black: black;
+
+    /* Font Size */
+    --s02: clamp(0.70rem, calc(0.81rem + -0.13vw), 0.78rem);
+    --s01: clamp(0.94rem, calc(0.94rem + 0.00vw), 0.94rem);
+    --s0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --s1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+    --s2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+    --s3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+    --s4: clamp(2.33rem, calc(1.77rem + 2.81vw), 3.95rem);
+    --s5: clamp(2.80rem, calc(1.94rem + 4.28vw), 5.26rem);
+    --s6: clamp(3.20rem, calc(2.24rem + 6.28vw), 7.26rem);
+
+    /* Padding */
+    --p2: 0.25rem ;
+    --p4: 0.5rem ;
+    --p6: 1rem ;
+    --p8: 1.5rem ;
+    --p10: 1.75rem ;
+    --p12: 2rem ;
+    --p14: 2.5rem ;
+    --p16: 3rem ;
+    --p18: 3.5rem ;
+    --p20: 4rem ;
+
+    /* Responsive Widths */
+    --sm: 648px;
+    --md: 768px;
+    --lg: 1024px;
+    --xl: 1920px;
+}
+
+/* Other Defaults */
+
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    list-style: none;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+p, blockquote{
+    font-size: var(--s01);
+}
+
+h1{
+    font-size: var(--s3);
+}
+h1 span{
+    font-size: var(--s1);
+}
+
+h2{
+    font-size: var(--s2);
+}
+h3{
+    font-size: var(--s1);
+}
+h4{
+    font-size: var(--s0);
+}

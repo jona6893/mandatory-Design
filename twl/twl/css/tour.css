@@ -1,0 +1,45 @@
+#tour{
+    position: relative;   
+    margin-bottom: 3rem;
+}
+
+#up-arrow{
+    position: absolute;
+    right: 1rem;
+
+}
+.tourBanner{
+    background-color: var(--lightBlue);
+    padding: var(--p6);
+    color: var(--white);
+}
+#speaker{
+    padding: var(--p6);
+}
+
+.datesContainer{
+    padding: var(--p6);
+    display: grid;
+    gap: var(--p8);
+}
+.dates img{
+    max-width: 1rem;
+}
+.dates{
+    padding-bottom: var(--p8);
+    border-bottom: 1px solid var(--black);
+    display: grid;
+    gap: var(--p6);
+}
+
+@media (min-width: 648px) {
+    .datesContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .dates{
+
+    border: 1px solid var(--black);
+    border-radius: 0.5rem;
+    padding: var(--p6);
+}
+}

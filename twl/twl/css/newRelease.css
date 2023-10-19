@@ -1,0 +1,33 @@
+
+#newRelease{
+    display: grid;
+    justify-items: center;
+    gap: var(--p6);
+    padding: var(--p8);
+    background-color: var(--beige);
+}
+#newRelease div{
+    display: grid;
+    justify-items: center;
+    gap: var(--p6);
+}
+#newRelease h3{
+    background-color: var(--darkRed);
+    color: var(--white);
+    padding: var(--p6) var(--p14);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+#newRelease h2{
+    color: var(--darkRed);
+}
+#newRelease img{
+    max-width: 8rem;
+}
+
+@media (min-width: 648px) {
+    #newRelease{
+       grid-template-columns: 1fr 0.25fr;
+    }
+}

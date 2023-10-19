@@ -1,0 +1,76 @@
+
+.contactBanner{
+    background-color: var(--lightBlue);
+    padding: var(--p6);
+    color: var(--white);
+}
+
+#contact .contactinfo{
+    
+    justify-content: center;
+}
+
+#contact article{
+    display: flex;
+    gap: var(--p6);
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--p6);
+    
+}
+#contact article img{ 
+    aspect-ratio: 1/1;
+    border-radius: 1000px;
+    width: 14rem;
+    margin-inline: auto;
+}
+
+.ConventionImg{
+    display: none;
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    padding: var(--p6);
+}
+#contact form fieldset{
+    padding: var(--p4);
+}
+#contact form fieldset{
+    border:  1px solid #000000;
+  border-radius: 0.25rem;
+}
+#contact form input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#contact form textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 648px) {
+    .ConventionImg{
+    display: block;
+    grid-column: 2;
+    grid-row: 1/3;
+}
+#contact .contactinfo{
+    display: grid;
+    gap: var(--p4);
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+#contact form{
+    grid-column: 1/3;
+    order: 1;
+}
+#contact article{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+}
