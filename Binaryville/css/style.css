@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  /* ----- Varibles ----- */
+
+  /* colors */
+  --purple: #630d6a;
+  --lightpurple: #d71ee8;
+  --lightBlue: #00bff3;
+  --green: #138a36;
+  --red: #ff715b;
+  --yellow: #f0c808;
+  --white: white;
+  --black: black;
+  --darkGray: #4c5b5c;
+
+  /* Font Size */
+  --s02: clamp(0.7rem, calc(0.81rem + -0.13vw), 0.78rem);
+  --s01: clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem);
+  --s0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --s1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+  --s2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+  --s3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+  --s4: clamp(2.33rem, calc(1.77rem + 2.81vw), 3.95rem);
+  --s5: clamp(2.8rem, calc(1.94rem + 4.28vw), 5.26rem);
+  --s6: clamp(3.2rem, calc(2.24rem + 6.28vw), 7.26rem);
+
+  /* Padding */
+  --p2: 0.25rem;
+  --p4: 0.5rem;
+  --p6: 1rem;
+  --p8: 1.5rem;
+  --p10: 1.75rem;
+  --p12: 2rem;
+  --p14: 2.5rem;
+  --p16: 3rem;
+  --p18: 3.5rem;
+  --p20: 4rem;
+}
+body {
+  max-width: 1200px;
+  margin-inline: auto;
+  /* font */
+  font-family: "Roboto Slab", serif;
+}
+img {
+  width: 100%;
+}
+
+/** ---------- Mobile ---------- */
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--p4);
+  gap: var(--p8);
+}
+
+header .logo {
+  width: 50%;
+}
+header .hamburger {
+  width: 10%;
+}
+.sr-only {
+  display: none;
+}
+#navbar {
+  display: none;
+}
+
+@media (min-width: 648px) {
+    .hamburger, .close{
+        display: none;
+    }
+    .sr-only{
+        display: block;
+    }
+    #navbar{
+        display: block;
+        width: 100%;
+    }
+    header .logo {
+       width: 25%;
+    }
+    #navbar ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--lightBlue);
+        padding: var(--p6);
+        border-radius:50px;
+        font-size: var(--s0);
+    }
+    #navbar ul li a{
+        color: var(--white);
+    }
+
+    
+}
+
+/* section 1 */
+
+.wrapper:first-of-type {
+  display: grid;
+  gap: var(--p8);
+  padding: var(--p8);
+}
+
+.wrapper:first-of-type h1 {
+  font-size: var(--s4);
+  color: var(--red);
+  margin-top: var(--p10);
+  text-align: center;
+}
+.grid {
+  display: grid;
+  gap: var(--p4);
+}
+
+.wrapper:first-of-type figure {
+  display: grid;
+  align-items: end;
+}
+
+.wrapper:first-of-type figure img {
+  grid-area: 1/1;
+}
+.wrapper:first-of-type figure figcaption {
+  grid-area: 1/1;
+  margin-bottom: var(--p16);
+  padding: var(--p8);
+  background-color: rgba(255, 255, 255, 0.5);
+
+  text-align: center;
+}
+.wrapper:first-of-type figure a {
+  color: var(--lightBlue);
+  font-size: var(--s1);
+}
+
+@media (min-width: 648px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    position: relative;
+  }
+  .grid .mainimg{}
+
+.grid .products{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.grid .secondimg{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.grid figure:nth-of-type(2){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 25%;
+     position: absolute;
+    top: 0;
+    left: 0;
+}
+.grid figure:nth-of-type(3){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 25%;
+     position: absolute;
+    top: 0;
+    right: 0;
+}
+.grid figure:nth-of-type(4){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 25%;
+     position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.grid figure:nth-of-type(5){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+} 
+
+/** section 2 */
+
+.wrapper:last-of-type {
+  display: grid;
+  gap: var(--p8);
+  padding: var(--p8);
+}
+
+.wrapper:last-of-type h2 {
+  color: var(--red);
+  font-size: var(--s0);
+  text-align: center;
+  margin-top: var(--p20);
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--p8);
+  justify-content: center;
+}
+
+.row li {
+  display: grid;
+  background: linear-gradient(#fff6cf, #fece7a);
+  border-radius: 100%;
+  aspect-ratio: 1;
+}
+
+.row img {
+  width: 75%;
+}
+
+.row figure {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.row figcaption {
+  color: var(--red);
+  font-size: var(--s01);
+}
+
+/* footer */
+
+footer {
+  display: grid;
+  background-image: url(../img/lil-bv-bkgd.jpg);
+  background-position: 50% 25%;
+  height: 150px;
+}
+
+footer p {
+  text-align: center;
+  padding: var(--p8);
+  font-size: var(--s01);
+}
